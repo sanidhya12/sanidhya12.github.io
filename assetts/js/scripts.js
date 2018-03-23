@@ -188,3 +188,8 @@ $(document).ready(function() {
 /*Portfolio slider
 /*-----------------------------------------------------------------------------------*/
 
+$('#slideshow').justifiedGallery({
+	rowHeight: 350,
+	lastRow: 'nojustify',
+	margins: 3
+});

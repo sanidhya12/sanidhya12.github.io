@@ -412,7 +412,7 @@ pre {
 }
 
 #wrapper {
-	z-index: 10;
+	z-index: 1;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -431,11 +431,6 @@ pre {
 	position: fixed;
 	margin-top: 2rem;
 	z-index: 100;
-}
-
-#slider {
-	height: 90%;
-	width: auto;
 }
 
 #contact {
@@ -483,34 +478,31 @@ pre {
 	font-size: 1.5rem;
 }
 
-#slideshow, #preview {
-	position: relative;
+#slideshow {
 	width: 73%;
 	height: 68%;
 	float: right;
-	z-index: 3;
-}
-
-
-#slideshow {
 	height: 12%;
 	position: absolute;
 	right: 0;
-	top: 60%;
 	z-index: 5;
 }
 
-#slideshow > div, #preview > div {
+.jg-entry {
+	z-index: 7;
+}
+
+#slideshow > div {
 	height: 90%;
 	margin: 2rem 2rem;
 	
 } 
 
-#slideshow > div > div, #preview > div > div{
+#slideshow > div > div {
 	height: 90%;
 }
 
-#slideshow img, #preview img {
+#slideshow img {
 	width: auto;
 	height: 100%;
 	margin: 0 auto;
@@ -562,11 +554,12 @@ pre {
 .work {
 	height: 12%;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	right: 2rem;
 	font-size: 2rem;
 	text-align: right;
+	z-index: 100;
 };
 
 /*-----------------------------------------------------------------------------------*/
