@@ -66,7 +66,7 @@ $(document).ready(function() {
     });
 
 /*-----------------------------------------------------------------------------------*/
-/*Portfolio slider
+/* Portfolio slider
 /*-----------------------------------------------------------------------------------*/
 $(document).ready(function(){
 	$('#slideshow').justifiedGallery ({
@@ -75,3 +75,12 @@ $(document).ready(function(){
 	margins: 3
 	});	
 });
+
+/*-----------------------------------------------------------------------------------*/
+/* Global site tag (gtag.js) - Google Analytics
+/*-----------------------------------------------------------------------------------*/
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-116976077-1');
