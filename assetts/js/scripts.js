@@ -68,12 +68,12 @@ $(document).ready(function() {
 /*-----------------------------------------------------------------------------------*/
 /* Portfolio slider
 /*-----------------------------------------------------------------------------------*/
-$(document).ready(function(){
-	$('#slideshow').justifiedGallery ({
-	rowHeight: 350,
+jQuery(document).ready(function(){
+	$('#slideshow').justifiedGallery({
+	rowHeight: 500,
 	lastRow: 'nojustify',
 	margins: 3
-	});	
+	});
 });
 
 /*-----------------------------------------------------------------------------------*/
