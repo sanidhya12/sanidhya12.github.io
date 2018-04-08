@@ -1,4 +1,13 @@
 /*-----------------------------------------------------------------------------------*/
+/* Global site tag (gtag.js) - Google Analytics
+/*-----------------------------------------------------------------------------------*/
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-116976077-1');
+
+/*-----------------------------------------------------------------------------------*/
 /*	TOGGLE
 /*-----------------------------------------------------------------------------------*/
 $(document).ready(function(){
@@ -66,21 +75,54 @@ $(document).ready(function() {
     });
 
 /*-----------------------------------------------------------------------------------*/
-/* Portfolio slider
+/* Portfolio Grid
 /*-----------------------------------------------------------------------------------*/
-jQuery(document).ready(function(){
-	$('#slideshow').justifiedGallery({
-	rowHeight: 500,
-	lastRow: 'nojustify',
-	margins: 3
+$.ready(function() {
+
+	var grid = document.querySelector('.grid');
+	
+	var msnry = new Masonry( grid, {
+		itemSelector: 'none', // select none at first
+  		columnWidth: '.grid__col-sizer',
+  		gutter: '.grid__gutter-sizer',
+  		percentPosition: true,
+  		stagger: 2,
+  		// nicer reveal transition
+		visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+		hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
+	});
+
+	// initial items reveal
+	imagesLoaded( grid, function() {
+  		grid.classList.remove('are-images-unloaded');
+  		msnry.options.itemSelector = '.grid__item';
+  		var items = grid.querySelectorAll('.grid__item');
+ 		msnry.appended( items );
 	});
 });
-
 /*-----------------------------------------------------------------------------------*/
-/* Global site tag (gtag.js) - Google Analytics
+/* Portfolio Infinite Scroll
 /*-----------------------------------------------------------------------------------*/
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
 
-gtag('config', 'UA-116976077-1');
+$.ready(function() {
+
+var nextPenSlugs = [
+	'202252c2f5f192688dada252913ccf13',
+	'a308f05af22690139e9a2bc655bfe3ee',
+	'6c9ff23039157ee37b3ab982245eef28',
+];
+
+function getErrPath() {
+	var slug = nextPenSlugs[this.loadCount];
+	return 'http://www.uneventripod.com/portfolio/debug/' + slug;
+}
+
+var grid = document.querySelector('.grid');
+
+var infScroll = new infiniteScroll( grid, {
+		path: getErrPath,
+		append: 'grid__item',
+        outlayer: msnry,
+		status: '.page-load-status'
+	});
+});
