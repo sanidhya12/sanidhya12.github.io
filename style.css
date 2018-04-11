@@ -406,7 +406,7 @@ pre {
 }
 
 #wrapper {
-	z-index: 1;
+	z-index: 0;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -424,7 +424,7 @@ pre {
 	float: left;
 	position: fixed;
 	padding-top: 6rem;
-	z-index: 100;
+	z-index: 99;
 }
 
 #contact {
@@ -627,7 +627,6 @@ pre {
 	width: 70%;
 	height: auto;
 	float: right;
-	position: absolute;
 	z-index: 5;
 	right: 1.2rem;
 	padding-top: 3rem;
@@ -639,43 +638,42 @@ pre {
 /*-----------------------------------------------------------------------------------*/
 
 .grid {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /* reveal grid after images loaded */
 .grid.are-images-unloaded {
-  opacity: 0;
+	opacity: 0;
 }
 
 .grid__item,
 .grid__col-sizer {
-  width: 49%;
-  z-index: 7;
+	width: 49%;
+	z-index: 7;
 }
 
 .grid__gutter-sizer { width: 2%; }
 
 /* hide by default */
 .grid.are-images-unloaded .image-grid__item {
-  opacity: 0;
+	opacity: 0;
 }
 
 .grid__item {
-  margin-bottom: 1rem;
-  float: left;
+	margin-bottom: 1%;
+	float: left;
 }
 
 .grid__item img {
-  display: block;
-  max-width: 95%;
+	max-width: 95%;
 }
 
 .page-load-status {
-  display: none; /* hidden by default */
-  padding-top: 20px;
-  border-top: 1px solid #131313;
-  text-align: center;
-  color: #DDD;
+	display: none; /* hidden by default */
+	padding-top: 20px;
+	border-top: 1px solid #131313;
+	text-align: center;
+	color: #DDD;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1144,5 +1142,12 @@ table span.cross {
 		margin-right: -26rem;
 		overflow: hidden;
 		position: fixed;
+	}
+
+	.work, #sidebox {
+		float: left;
+	}
+	#sidebox img {
+		display: inline-block;
 	}
 }

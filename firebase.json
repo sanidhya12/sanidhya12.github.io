@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "uneventripod",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

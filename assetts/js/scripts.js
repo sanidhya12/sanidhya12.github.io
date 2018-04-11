@@ -80,13 +80,13 @@ $(document).ready(function() {
 $.ready(function() {
 
 	var grid = document.querySelector('.grid');
-	
+
 	var msnry = new Masonry( grid, {
 		itemSelector: 'none', // select none at first
   		columnWidth: '.grid__col-sizer',
   		gutter: '.grid__gutter-sizer',
   		percentPosition: true,
-  		stagger: 2,
+  		stagger: 10,
   		// nicer reveal transition
 		visibleStyle: { transform: 'translateY(0)', opacity: 1 },
 		hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
@@ -121,7 +121,7 @@ var grid = document.querySelector('.grid');
 
 var infScroll = new infiniteScroll( grid, {
 		path: getErrPath,
-		append: 'grid__item',
+		append: '.grid__item',
         outlayer: msnry,
 		status: '.page-load-status'
 	});
