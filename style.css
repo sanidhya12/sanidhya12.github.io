@@ -238,15 +238,6 @@ h3 img {
 	line-break: 0px;
 }
 
-.intro {
-	font-family: 'Montserrat', serif;
-	font-style: italic;
-	font-size: 17px;
-	color: #585858;
-	line-height: 24px;
-	margin-bottom: 20px;
-}
-
 blockquote p {
 	font-family: 'Montserrat', serif;
 	font-style: italic;
@@ -444,25 +435,6 @@ pre {
 	z-index: 3;
 }
 
-#home {
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	background-color: #000000;
-	overflow: hidden;
-	float: right;
-}
-
-#home > img {
-	z-index: 0;
-	width: auto;
-	height: 80%;
-	position: absolute;
-	right: 0;
-	top: 2rem;
-	float: right;
-}
-
 #contents {
 	position: relative;
 	text-align: right;
@@ -630,10 +602,57 @@ pre {
 * html .menu-v ul li a { height: 1%; }
 
 /*-----------------------------------------------------------------------------------*/
+/*	Homepage
+/*-----------------------------------------------------------------------------------*/
+
+#home {
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background-color: #000000;
+	overflow: hidden;
+	float: right;
+}
+#home > img {
+	z-index: 0;
+	width: auto;
+	height: 80%;
+	position: absolute;
+	right: 0;
+	top: 2rem;
+	float: right;
+}
+
+.intro {
+	width: 70%;
+	font-family: '', serif;
+	font-size: 0.8rem;
+	line-height: 1rem;
+	background-color: white;
+	color: #525354;
+	float: right;
+}
+.intro p {
+	width: 100%;
+	position: relative;
+	float: right;
+	padding-right: 3rem;
+	font-weight: lighter;
+}
+
+.intro-head {
+	font-variant: small-caps;
+	color: #000;
+}
+
+.intro-quote {
+	font-style: italic;
+}
+/*-----------------------------------------------------------------------------------*/
 /*	Portfolio
 /*-----------------------------------------------------------------------------------*/
 
-#slideshow {
+#slideshow{
 	width: 70%;
 	height: auto;
 	float: right;
@@ -1149,14 +1168,15 @@ table span.cross {
 @media only screen and (orientation: portrait) {
 
 	#home > img {
-		margin-right: -26rem;
+		left: 0;
+		overflow-x: hidden;
 		overflow: hidden;
-		position: fixed;
 	}
 
 	.work, #sidebox {
 		float: left;
 	}
+	
 	#sidebox img {
 		display: inline-block;
 	}

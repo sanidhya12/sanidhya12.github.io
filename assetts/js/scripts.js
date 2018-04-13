@@ -65,7 +65,7 @@ jQuery(document).ready(function($){
 /*-----------------------------------------------------------------------------------*/
 
 $(document).ready(function() {
-        $('.items .box .image, .items .box .left-side, .carousel ul li').mouseenter(function(e) {
+        $('.items .box .image, .items .box .left-side').mouseenter(function(e) {
 
             $(this).children('a').children('span').fadeIn(200);
         }).mouseleave(function(e) {
@@ -73,6 +73,73 @@ $(document).ready(function() {
             $(this).children('a').children('span').fadeOut(200);
         });
     });
+
+/*-----------------------------------------------------------------------------------*/
+/* Homepage - About
+/*-----------------------------------------------------------------------------------*/
+
+$(document).ready(function() {
+
+	$('.intro-quote').append('<p>"Capturing the world through his glass lens, Sanidhya is our VR'+ 
+		'Photographer. He found his passion amidst The Himalayas and hopes to extend that all over'+ 
+		'the world with outsiteVR. He is currently fighting engineering in USICT."</p><br><br>');
+	
+	$('.intro-catchphrase').append('<p>capturing the world through his canon 800D, sanidhya</p><br><br>');
+	
+	$('.intro-story')
+
+	.append('<p>It all starts with a 9th grade socially awkward kid wanting to find'+ 
+		' a perspective in life. A kid who was always behind the lens clicking family pictures with'+ 
+		' the film camera, I felt a breath of satisfaction every time the pictures I clicked was'+ 
+		' taken to the photo studio, printed after 4 days and aligned into he family photo album.'+
+		'</p><br>')
+
+	.append('<p>The stubbornness of a kid got me my first DSLR camera, the canon 1100D. The simple'+ 
+		' reason for me getting this camera was the introductory sale by Amazon for this camera. A'+ 
+		' cheap camera which came with two lenses.</p><br>')
+	
+	.append('<p>Clicking the most random pictures of insects and plants exploring new places and'+ 
+		' playing with the camera suddenly gave me a new perspective in life, exactly what I was'+ 
+		' seeking. What my eyes saw, was perceived as an image clicked through my camera rather'+ 
+		' than a sight.</p><br>')
+
+	.append('<p>A month into getting the camera and already about 5000 pictures down, I was sure'+ 
+		" I wanted to live my life capturing images. Never leaving my camera more than an arm's"+ 
+		' distance away, I clicked and captured the most insignificant pictures.<br>But then came'+
+		' grade 11th and I was forced into a field I was not at all interested, science.</p><br>')
+
+	.append('<p>Holding back on my camera, I had to focus more on chemistry, math and physics.</p><br><br>')
+
+	.append('<p>Soon enough engineering came along the way, still stuck in the cycle I knew I just'+
+		' could not continue without having my camera by my side. I joined Vh1 as an intern and soon'+
+		' enough was clicking pictures for some major artists at music events. <br>Building contacts'+
+		' along the way, i soon started collaborating with a variety of people, from food bloggers'+
+		' to business looking or build an online presence. </p><br>')
+
+	.append('<p>But this was just not enough, and in the knick of time, a trip to the Himalayas came'+
+		' along.</p><br><br>')
+
+	.append('<p>Travelling in the HRTC Bus, I had an epiphany, the realisation no matter how grand'+
+		' these mountains were they were calm, and ready and I need to be the same.  Losing my self'+
+		' in the mountains, clicking and capturing everything, I learned a lot about living life.'+
+		'</p><br>')
+
+	.append('<p>Soon expanding into videos and cinematography, I have never looked back. Working on'+
+		' my personal project, I plan to create my first travel video, which shows the various steps'+
+		' of my life journey through a trip to the Himalayas. </p><br>')
+
+	.append('<p>Having taken too much time already,I would like to conclude by saying, not all of us'+
+		" were meant to be engineers, but that does not mean all us can't be satisfied, exploring"+
+		' till you find what you need to do matters the most. Because 40 years down the lane, old'+
+		' and tired sitting on a rocking chair, would you rather want to be satisfied than'+
+		' successful.</p><br>');
+
+	$('#contents').scroll(function() {
+		if($('#home').css('translateY', '100px')){
+			$('#sidebar').css('background', 'rgba(f, f, f, 0.6)');
+		}
+	});
+});
 
 /*-----------------------------------------------------------------------------------*/
 /* Portfolio Grid
